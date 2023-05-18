@@ -1,0 +1,12 @@
+[package]
+name = "neuradeon"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lazy_static = "*"
+itertools = "*"
+rand = "*"
+serde_yaml = "*"
+serde = { version = "*", features = ["derive"] }
+const-str = "*"
