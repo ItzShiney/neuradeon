@@ -15,6 +15,7 @@ use yaml::Value;
 pub struct Config {
     pub items_count: usize,
     pub filter: Filter,
+    pub pause_after: bool,
 
     pub plural_weight: f64,
     pub noun_prefix_chance: f64,
@@ -31,6 +32,7 @@ impl Default for Config {
         Self {
             items_count: 30,
             filter: Filter::default(),
+            pause_after: true,
 
             plural_weight: 0.3,
             noun_prefix_chance: 0.7,

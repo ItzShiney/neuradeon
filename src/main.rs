@@ -31,4 +31,8 @@ fn main() {
 
         println!("{}", res);
     }
+
+    if config().pause_after {
+        loop {}
+    }
 }
