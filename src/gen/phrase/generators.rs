@@ -330,18 +330,6 @@ pub fn phrase_generators() -> &'static [fn() -> String] {
                     let gender = ?;
                     let intj = ?;
                     [
-                        object(gender, Case::Nom),
-                        numbered![gender, "у тебя за щекой", "у вас за щеками"],
-                        intj.unwrap_or_default(),
-                        ",",
-                        numbered![gender, "проверяй", "проверяйте"],
-                        ". нет ничего? ясно, сглотнул уже",
-                    ]
-                },
-                phrase_generator! {
-                    let gender = ?;
-                    let intj = ?;
-                    [
                         numbered![gender, "твой отец был", "ваши отцы были"],
                         object(gender, Case::Inst),
                         ",",
