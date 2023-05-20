@@ -40,8 +40,8 @@ impl Default for Config {
             interjection_chance: 0.25,
             qualities_range: 0..=2,
 
-            completely_out_of_context_phrases: true,
-            self_deprecation: true,
+            completely_out_of_context_phrases: false,
+            self_deprecation: false,
         }
     }
 }
