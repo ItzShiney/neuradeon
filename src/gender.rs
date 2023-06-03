@@ -1,3 +1,4 @@
+use crate::config;
 use crate::Number;
 use lazy_static::lazy_static;
 use rand::distributions;
@@ -30,7 +31,7 @@ impl Gender {
     pub fn choose() -> Self {
         lazy_static! {
             static ref WEIGHTS: distributions::WeightedIndex<f64> =
-                distributions::WeightedIndex::new([1., 1., 1., 0.2]).unwrap();
+                distributions::WeightedIndex::new([1., 1., 1., config().plural_weight]).unwrap();
         }
 
         Self::all()[WEIGHTS.sample(&mut thread_rng())]
